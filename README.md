@@ -20,6 +20,6 @@ The website has 5 sections:
   <ul> <li>Quote </li>
    <li>Saavn corporate jio page reference </li> <li>Current Team </li></ul>
   <li>Clients</li>
-   <li>Client logos and testimonals </li>
+  <ul> <li>Client logos and testimonals </li></ul>
   <li>Contact Us </li>
 </ul>
