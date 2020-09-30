@@ -23,3 +23,4 @@ The website has 5 sections:
   <ul> <li>Client logos and testimonals </li></ul>
   <li>Contact Us </li>
 </ul>
+<h3> For the content you can use : https://www.linkedin.com/company/geliose <h3>
