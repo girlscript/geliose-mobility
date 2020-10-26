@@ -1,16 +1,119 @@
 <!DOCTYPE html>
+
 <head>
 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Footer Stylesheet -->
   <link rel="stylesheet" type="text/css" href="./css/footer.css">
+
+  <!-- Mapbox API CSS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+
+  <!-- Mapbox API -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+
 </head>
+
 <body>
-  <h1 align = "centre">Geliose Mobility</h1>
+  <h1 align="centre">Geliose Mobility</h1>
   <p> Work in progress</p>
 
-  
   <section id="footer">
-    <div class="container">
-      
-    </div>
+    <footer class="footer-bs">
+      <div class="row">
+        <div class="col-md-4 footer-brand animated fadeInLeft">
+          <!-- Logo -->
+          <h2>Geliose Mobility</h2>
+
+          <!-- Mapbox Map -->
+          <div id="map" style='width: 350px; height: 300px;'></div>
+          <script>
+            mapboxgl.accessToken =
+              '<your API Key here>';
+            var map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/mapbox/streets-v11',
+              center: [12.550343, 55.665957],
+              zoom: 8
+            });
+
+            var marker = new mapboxgl.Marker()
+              .setLngLat([12.550343, 55.665957])
+              .addTo(map);
+          </script>
+        </div>
+        <div class="col-md-3 footer-nav animated fadeInUp">
+          <h4>Quick Links —</h4>
+          <div class="col-md-6">
+            <ul class="pages">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Product's</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Clients</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list">
+              <li><a href="#">Terms & Condition</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2 footer-social animated fadeInDown">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Linkedin</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-ns animated fadeInRight">
+          <h4>Get in Touch</h4>
+          <p>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="textarea">Message</label>
+              <textarea class="form-control" id="textarea" placeholder="Enter Message" rows="3"></textarea>
+            </div>
+
+            <!-- Captcha -->
+            <div class="form-group">
+              <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </p>
+        </div>
+      </div>
+    </footer>
   </section>
+
+  <!-- Captcha -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
 </body>
